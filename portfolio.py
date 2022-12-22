@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 pd.set_option('display.max_columns', None)
 
 # Getting files in folder (cause I need to work with several excel files)
-files_list = os.listdir('C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/')
+files_list = os.listdir('C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/')
 # Cleaning files list to only have Excel files
 files = []
 for i in files_list:
@@ -32,7 +32,7 @@ for j in files:
     # Import only a section of the Excel file
     print(j)
     paciente = pd.read_excel(
-        io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+        io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
         sheet_name='BITACORA',
         usecols='C:AF',
         skiprows=21,
@@ -82,7 +82,7 @@ for j in files:
     # Import only a section of the Excel file
     print(j)
     glucosa = pd.read_excel(
-        io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+        io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
         sheet_name='BITACORA',
         usecols='E:AF',
         skiprows=62,
@@ -316,7 +316,7 @@ for j in files:
     # Import only a section of the Excel file
     print(j)
     paciente = pd.read_excel(
-        io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+        io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
         sheet_name='BITACORA',
         usecols='AJ:AK',
         skiprows=2,
@@ -509,7 +509,7 @@ for j in files:
     # Import only a section of the Excel file
     print(j)
     paciente = pd.read_excel(
-        io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+        io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
         sheet_name='BITACORA',
         usecols='D:AF',
         skiprows=61,
@@ -615,7 +615,7 @@ for j in files:
     # Import only a section of the Excel file
     print(j)
     paciente = pd.read_excel(
-        io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+        io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
         sheet_name='BITACORA',
         usecols='C:AF',
         skiprows=59,
@@ -680,7 +680,7 @@ for j in files:  # with try and except cause some files are messed up
         # Import only a section of the Excel file
         print(j)
         paciente = pd.read_excel(
-            io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+            io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
             sheet_name='BITACORA',
             usecols='D:AF',
             skiprows=108,
@@ -761,7 +761,7 @@ for j in files:  # with try and except cause some files are messed up
         # Import only a section of the Excel file
         print(j)
         paciente = pd.read_excel(
-            io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+            io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
             sheet_name='BITACORA',
             usecols='D:AF',
             skiprows=19,
@@ -853,7 +853,7 @@ for j in files:  # with try and except cause some files are messed up
         # Import only a section of the Excel file
         print(j)
         paciente = pd.read_excel(
-            io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+            io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
             sheet_name='BITACORA',
             usecols='D:AF',
             skiprows=37,
@@ -934,7 +934,7 @@ for j in files:  # with try and except cause some files are messed up
         # Import only a section of the Excel file
         print(j)
         paciente = pd.read_excel(
-            io=f'C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/Data RAW/2022-11-21/NOFATER/{j}',
+            io=f'C:/Harold Data/Projects/2022-11-14 PM/Data RAW/2022-11-21/NOFATER/{j}',
             sheet_name='BITACORA',
             usecols='D:AF',
             skiprows=43,
@@ -1009,7 +1009,7 @@ all_data = pd.merge(all_data, med_data, on=['id', 'day'], how='left')
 
 
 # Saving advance
-all_data.to_csv('C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/all_data.csv')
+all_data.to_csv('C:/Harold Data/Projects/2022-11-14 PM/all_data.csv')
 # loading DB
-all_data = pd.read_csv('C:/Harold Data/Projects/2022-11-14 Pablo Morbiducci/all_data.csv')
+all_data = pd.read_csv('C:/Harold Data/Projects/2022-11-14 PM/all_data.csv')
 all_data.drop('Unnamed: 0', axis=1, inplace=True)
